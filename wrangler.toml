@@ -1,0 +1,8 @@
+name = "melkyar-cloud"
+compatibility_date = "2026-09-24"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "melkyar-db"
+database_id = "PASTE_D1_DATABASE_ID_HERE"

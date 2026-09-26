@@ -1,0 +1,43 @@
+:root,
+[data-theme="light"] {
+  --bg: #F2F1EC;
+  --bg-elevated: #FFFFFF;
+  --bg-sunken: #E9E7DF;
+  --sidebar-bg: #16233A;
+  --sidebar-text: #C9D2E3;
+  --sidebar-text-active: #FFFFFF;
+  --ink: #1B1F23;
+  --ink-muted: #5B6472;
+  --border: #DDD9CF;
+  --primary: #16233A;
+  --primary-contrast: #FFFFFF;
+  --accent: #B9893D;
+  --accent-contrast: #241705;
+  --sage: #4F7869;
+  --rust: #B14B3D;
+  --shadow: 0 1px 2px rgba(22, 35, 58, 0.06), 0 6px 20px rgba(22, 35, 58, 0.06);
+}
+
+
+[data-theme="emerald-gold"]{--bg:#f4f7f2;--bg-elevated:#fff;--bg-sunken:#e8efe8;--sidebar-bg:#174d3b;--sidebar-text:#d8eadf;--sidebar-text-active:#fff;--ink:#173126;--ink-muted:#5d7568;--border:#d5e1d8;--primary:#174d3b;--primary-contrast:#fff;--accent:#c49a43;--accent-contrast:#fff;--sage:#2d7a5c;--rust:#b65c48;--shadow:0 6px 20px rgba(23,77,59,.08);}
+[data-theme="sage"]{--bg:#eef4f0;--bg-elevated:#fff;--bg-sunken:#e1ece6;--sidebar-bg:#315b4b;--sidebar-text:#d9e7df;--sidebar-text-active:#fff;--ink:#20352c;--ink-muted:#60746a;--border:#ceddd5;--primary:#315b4b;--primary-contrast:#fff;--accent:#8fae63;--accent-contrast:#17301f;--sage:#5f8f78;--rust:#b45d4c;--shadow:0 6px 20px rgba(49,91,75,.08);}
+[data-theme="sand"]{--bg:#f7f1e7;--bg-elevated:#fffdf9;--bg-sunken:#eee5d6;--sidebar-bg:#6b5337;--sidebar-text:#eadfce;--sidebar-text-active:#fff;--ink:#3c3024;--ink-muted:#776a5a;--border:#ded2c0;--primary:#6b5337;--primary-contrast:#fff;--accent:#b88b48;--accent-contrast:#2d210f;--sage:#70866b;--rust:#a95643;--shadow:0 6px 20px rgba(107,83,55,.08);}
+
+
+/* Theme stability: all controls inherit the selected theme. */
+html[data-theme] { color-scheme: light; }
+html[data-theme=emerald-gold], html[data-theme=sage], html[data-theme=sand] { color-scheme: light; }
+
+
+/* UI control stability: the default/light design keeps the original navy action buttons. */
+[data-theme="light"] { --primary:#16233A; --primary-contrast:#FFFFFF; }
+
+
+/* Theme compatibility aliases used by older modules. */
+[data-theme="light"], [data-theme="emerald-gold"], [data-theme="sage"], [data-theme="sand"] {
+  color-scheme: light;
+  --surface: var(--bg-elevated);
+  --surface-2: var(--bg-sunken);
+  --text: var(--ink);
+  --border-color: var(--border);
+}

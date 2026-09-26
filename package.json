@@ -1,0 +1,39 @@
+{
+  "name": "melkyar",
+  "version": "0.4.0",
+  "description": "ملک‌یار — نسخه اصلی بدون لایسنس",
+  "main": "main.js",
+  "author": "Melkyar",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis portable",
+    "build:cloud": "echo Cloudflare Web build - no Electron build required"
+  },
+  "devDependencies": {
+    "electron": "39.2.7",
+    "electron-builder": "26.0.12"
+  },
+  "build": {
+    "appId": "ir.melkyar.desktop",
+    "productName": "ملک‌یار",
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!node_modules/.cache/**"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/melkyar.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
