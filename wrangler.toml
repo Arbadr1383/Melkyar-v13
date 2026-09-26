@@ -5,4 +5,4 @@ pages_build_output_dir = "."
 [[d1_databases]]
 binding = "DB"
 database_name = "melkyar-db"
-database_id = "PASTE_D1_DATABASE_ID_HERE"
+database_id = "9ed27b4d-c9d1-47ad-8edf-f3dc7c39e9dd"
